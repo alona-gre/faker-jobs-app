@@ -1,16 +1,31 @@
-# faker_app_flutter_firebase
+# faker-jobs-app
 
-A new Flutter project.
+## Project Setup
 
-## Getting Started
+To clone the repo for the first time and open it in VSCode, run this:
 
-This project is a starting point for a Flutter application.
+```
+git clone https://github.com/alona-gre/faker-jobs-app
+cd faker-jobs-app
+code .
+```
 
-A few resources to get you started if this is your first Flutter project:
+### Firebase Setup
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Since the project uses Firebase, some additional files will be needed:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+lib/firebase_options.dart
+ios/Runner/GoogleService-Info.plist
+ios/firebase_app_id_file.json
+macos/Runner/GoogleService-Info.plist
+macos/firebase_app_id_file.json
+android/app/google-services.json
+```
+
+These files have been added to `.gitignore`, so you need to run this command to generate them with the flutterfire CLI:
+
+```
+cd faker-jobs-app
+flutterfire configure
+```
